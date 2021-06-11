@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Body Mass Index (BMI)</string>
+    <string name="copyright">Copyright (c) 2021 LovasTech</string>
+    <string name="about_text">About</string>
+    <string name="developer">Developed by</string>
+    <string name="name1_text">Adam Mikhail Danial bin Shamsul Kamal</string>
+    <string name="matrics1_text">(2020985303)</string>
+    <string name="name2_text">Aiman Syahmi bin Norazman</string>
+    <string name="matrics2_text">(2020985017)</string>
+    <string name="class_name">Class</string>
+    <string name="class_text">RCS2515A</string>
+    <string name="programme_name">Programme Code</string>
+    <string name="programme_text">CS251 Netcentric Computing</string>
+    <string name="hyperlink">To view the source code, you may visit here: <a href="https://github.com/adamkhldanial/bmicalculator">GitHub</a></string>
+</resources>
