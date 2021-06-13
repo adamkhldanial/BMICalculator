@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private ToggleButton toggleUnitsButton;
     private CardView bmiResultCardView;
     private boolean inMetricUnits;
+    private Button btnClear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +82,13 @@ public class MainActivity extends AppCompatActivity {
                         displayBMI(bmi);
                     }
                 }
+
+                weightKgEditText.onEditorAction(EditorInfo.IME_ACTION_DONE);
+                heightCmEditText.onEditorAction(EditorInfo.IME_ACTION_DONE);
+
+                weightLbsEditText.onEditorAction(EditorInfo.IME_ACTION_DONE);
+                heightFtEditText.onEditorAction(EditorInfo.IME_ACTION_DONE);
+                heightInEditText.onEditorAction(EditorInfo.IME_ACTION_DONE);
             }
         });
 
@@ -88,6 +97,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 inMetricUnits = !inMetricUnits;
                 updateInputsVisibility();
+            }
+        });
+
+        btnClear=findViewById(R.id.btnClear);
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                weightKgEditText.getText().clear();
+                heightCmEditText.getText().clear();
+
+                weightLbsEditText.getText().clear();
+                heightFtEditText.getText().clear();
+                heightInEditText.getText().clear();
+
+                bmiResultCardView.setVisibility(View.GONE);
             }
         });
     }

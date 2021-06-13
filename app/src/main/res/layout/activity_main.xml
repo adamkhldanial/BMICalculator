@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="6dip"
+    android:layout_margin="0dip"
+    android:background="@drawable/background_gradient"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -22,6 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="6dip"
+        android:background="@drawable/button_style"
         android:checked="true"
         android:fontFamily="@font/poppins"
         android:padding="6dip"
@@ -45,17 +47,18 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="179dp"
                 android:layout_gravity="center_vertical"
+                android:background="#FFF9E3"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/activity_main_heightlabel"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:gravity="center_horizontal"
                     android:text="Height"
-                    android:textSize="24sp" />
+                    android:textSize="30sp" />
 
                 <EditText
                     android:id="@+id/activity_main_heightcm"
@@ -65,7 +68,8 @@
                     android:ems="3"
                     android:gravity="center_horizontal"
                     android:hint="cm"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="24sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -80,7 +84,8 @@
                         android:ems="3"
                         android:gravity="center_horizontal"
                         android:hint="ft"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:textSize="24sp" />
 
                     <EditText
                         android:id="@+id/activity_main_heightinches"
@@ -89,7 +94,8 @@
                         android:ems="3"
                         android:gravity="center_horizontal"
                         android:hint="in"
-                        android:inputType="numberDecimal" />
+                        android:inputType="numberDecimal"
+                        android:textSize="24sp" />
 
                 </LinearLayout>
 
@@ -107,17 +113,18 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="179dp"
                 android:layout_gravity="center_vertical"
+                android:background="#FFF9E3"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/activity_main_weightlabel"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="65dp"
                     android:gravity="center_horizontal"
                     android:text="Weight"
-                    android:textSize="24sp" />
+                    android:textSize="30sp" />
 
                 <EditText
                     android:id="@+id/activity_main_weightkgs"
@@ -127,7 +134,8 @@
                     android:ems="3"
                     android:gravity="center_horizontal"
                     android:hint="kg"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="24sp" />
 
                 <EditText
                     android:id="@+id/activity_main_weightlbs"
@@ -137,7 +145,8 @@
                     android:ems="3"
                     android:gravity="center_horizontal"
                     android:hint="lbs"
-                    android:inputType="numberDecimal" />
+                    android:inputType="numberDecimal"
+                    android:textSize="24sp" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -152,7 +161,8 @@
         android:layout_margin="6dip"
         android:fontFamily="@font/poppins"
         android:padding="6dip"
-        android:text="Calculate" />
+        android:text="Calculate"
+        android:background="@drawable/button_style"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/activity_main_resultcard"
@@ -206,5 +216,24 @@
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="6dip"
+        android:fontFamily="@font/poppins"
+        android:padding="6dip"
+        android:text="RESET"
+        android:background="@drawable/button_style"/>
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/copyright"
+        android:textAlignment="center"
+        android:textStyle="bold" />
 
 </LinearLayout>
